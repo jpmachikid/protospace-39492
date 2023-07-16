@@ -15,3 +15,31 @@
 
 - has_many :prototypes
 - has_many :comments
+
+## prototypes table
+
+| column             | Type      | Options       |
+| ------------------ | --------- | ------------- |
+| title               | string    | null: false   |
+| catch_copy              | text    | null: false   |
+| concept | text    | null: false   |
+| user | references    | null: false, external_key   |
+
+### Association
+
+- belongs_to :user
+- has_many :comments
+
+## comments table
+
+| column             | Type      | Options       |
+| ------------------ | --------- | ------------- |
+| content               | text    | null: false   |
+| prototype              | references    | null: false, external_key   |
+| user | references    | null: false, external_key   |
+
+
+### Association
+
+- belongs_to :user
+- belongs_to :prototype
