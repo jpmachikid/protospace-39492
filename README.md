@@ -1,6 +1,6 @@
-#Table設計
+# Table設計
 
-##users table
+## users table
 
 | column             | Type      | Options       |
 | ------------------ | --------- | ------------- |
@@ -11,7 +11,7 @@
 | occupation               | text    | null: false   |
 | position               | string    | null: false   |
 
-###Association
+### Association
 
 - has_many :prototypes
 - has_many :comments
